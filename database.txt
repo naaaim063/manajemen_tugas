@@ -1,0 +1,12 @@
+CREATE DATABASE db_praktikum;
+USE db_praktikum;
+
+CREATE TABLE tugas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    judul VARCHAR(150) NOT NULL,
+    deskripsi TEXT,
+    deadline DATE NOT NULL,
+    status ENUM('Pending','Selesai') DEFAULT 'Pending',
+    gambar VARCHAR(200),
+    dibuat_pada DATETIME DEFAULT CURRENT_TIMESTAMP
+);

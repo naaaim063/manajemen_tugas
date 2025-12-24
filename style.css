@@ -1,0 +1,415 @@
+*{
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:0;
+    background:#000;
+}
+
+/* ============================= */
+/* ===== BACKGROUND HALAMAN ===== */
+/* ============================= */
+
+/* INDEX.PHP */
+body.home .bg-dashboard{
+    background-image:url("images/dashboard.png"); /* Ganti gambar untuk index.php */
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+/* TUGAS.PHP */
+body.tugas .bg-dashboard{
+    background-image:url("images/daftar_tugas.png"); /* Ganti gambar untuk tugas.php */
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+/* PROFIL.PHP */
+body.profil .bg-dashboard{
+    background-image:url("images/profil01.png"); /* Ganti gambar untuk profil.php */
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+/* TAMBAH.PHP */
+body.tambah .bg-dashboard{
+    background-image:url("images/daftar_tugas.png"); /* Ganti gambar untuk index.php */
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+/* EDIT.PHP */
+body.edit .bg-dashboard{
+    background-image:url("images/daftar_tugas.png"); /* Ganti gambar untuk index.php */
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.65);
+    min-height:100vh;
+}
+
+/* Layout */
+.app{
+    display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+    width:230px;
+    background:#1e2a48;
+    min-height:100vh;
+    padding:20px;
+    color:white;
+}
+
+.logo{
+    width:40px;
+    margin-bottom:20px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:6px;
+    margin-bottom:5px;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+    background:#4f74d9;
+}
+
+/* Main */
+.main{
+    flex:1;
+    padding:30px;
+    color:white;
+}
+
+/* Kalender */
+.calendar-big{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(8px);
+    border-radius:16px;
+    padding:25px;
+}
+
+.calendar-big h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.calendar-big table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+.calendar-big th{
+    color:#ddd;
+    padding:8px;
+}
+
+.calendar-big td{
+    padding:10px;
+}
+
+.today{
+    background:#4f74d9;
+    color:white;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-weight:bold;
+}
+
+.calendar-info{
+    margin:15px 0 25px;
+    color:#eee;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(6px);
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.card b{
+    font-size:36px;
+}
+
+.blue{border-left:5px solid #4f74d9;}
+.green{border-left:5px solid #2ecc71;}
+.red{border-left:5px solid #e74c3c;}
+
+/* Button */
+.btn{
+    background:#4f74d9;
+    color:white;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:6px;
+    display:inline-block;
+    margin-bottom:10px;
+}
+
+/* Tabel Data Tugas */
+.table-box{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(8px);
+    padding:15px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+.table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    color:black;
+}
+
+.table th, .table td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+.table th{
+    background:#4f74d9;
+    color:white;
+}
+
+.table tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+.table tr:hover{
+    background:#eef2ff;
+}
+
+/* Menu titik tiga */
+.dots{
+    cursor:pointer;
+    font-size:20px;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    right:0;
+    top:25px;
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    z-index:10;
+}
+
+.menu a{
+    display:block;
+    padding:10px;
+    color:black;
+    text-decoration:none;
+}
+
+.menu a:hover{
+    background:#4f74d9;
+    color:white;
+}
+
+/* Form elegan */
+.form-box{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:18px;
+    max-width:500px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.form-box label{
+    display:block;
+    margin-top:15px;
+    color:#ddd;
+    font-weight:600;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select{
+    width:100%;
+    padding:12px;
+    margin-top:6px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.9);
+    font-size:14px;
+}
+
+.form-box textarea{
+    resize:none;
+    height:110px;
+}
+
+.form-box input:focus,
+.form-box textarea:focus,
+.form-box select:focus{
+    outline:none;
+    box-shadow:0 0 0 2px #4f74d9;
+}
+
+.form-box button{
+    margin-top:25px;
+    width:100%;
+    padding:14px;
+    background:#4f74d9;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form-box button:hover{
+    background:#3b5fc4;
+}
+
+/* ============================= */
+/* ===== PROFIL PAGE ONLY ===== */
+/* ============================= */
+
+.profile-wrapper{
+    display:flex;
+    gap:25px;
+}
+
+/* Menu kiri profil */
+.profile-sidebar{
+    width:240px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+}
+
+.profile-sidebar img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #4f74d9;
+    margin-bottom:10px;
+}
+
+.profile-sidebar h3{
+    color:white;
+    margin:10px 0 5px;
+}
+
+.profile-sidebar p{
+    color:#ddd;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.profile-sidebar a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:6px;
+    background:rgba(255,255,255,0.1);
+}
+
+.profile-sidebar a:hover,
+.profile-sidebar .active{
+    background:#4f74d9;
+}
+
+.profile-sidebar .logout{
+    background:#e74c3c;
+}
+
+/* Konten kanan */
+.profile-content-box{
+    flex:1;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    padding:25px;
+}
+
+/* Bagian atas */
+.profile-top-box{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.profile-top-box img{
+    width:120px;
+    height:120px;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+.profile-top-box h2{
+    color:white;
+}
+
+.profile-top-box p{
+    color:#ddd;
+}
+
+/* Grid info */
+.profile-info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:15px;
+}
+
+.profile-info-grid div{
+    background:rgba(255,255,255,0.12);
+    padding:15px;
+    border-radius:10px;
+    color:white;
+}
+
+.profile-info-grid b{
+    display:block;
+    font-size:13px;
+    color:#ccc;
+}
+
+.profile-info-grid span{
+    font-size:16px;
+    font-weight:bold;
+}
