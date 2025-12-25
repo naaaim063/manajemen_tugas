@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Profil</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     
@@ -28,7 +28,7 @@
     <div class="profile-content-box">
 
         <div class="profile-top-box">
-            <img src="images/profil.png">
+            <img src="assets/profil.png">
             <div>
                 <h2>Naim Maskur</h2>
                 <p>NIM : 231011223</p>

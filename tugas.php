@@ -7,9 +7,32 @@ $no=1;
 <html>
 <head>
 <title>Data Tugas</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.search-box{
+    margin:15px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.search-box input{
+    flex:1;
+    padding:12px 15px;
+    border-radius:10px;
+    border:none;
+    font-size:14px;
+    outline:none;
+    background:rgba(255,255,255,0.9);
+}
+
+.search-box span{
+    color:#ddd;
+    font-size:14px;
+}
+</style>
 </head>
-<body>
 
 <body class="tugas">
 
@@ -27,10 +50,14 @@ $no=1;
 <div class="main">
 
 <h1>Data Tugas</h1>
-<a href="tambah.php" class="btn">+ Tambah Tugas</a>
+
+<div class="search-box">
+    <a href="tambah.php" class="btn">+ Tambah Tugas</a>
+    <input type="text" id="searchInput" placeholder="Cari judul, deskripsi, status...">
+</div>
 
 <div class="table-box">
-<table class="table">
+<table class="table" id="taskTable">
 <tr>
     <th>No</th>
     <th>Judul</th>
@@ -51,7 +78,7 @@ $no=1;
         <span class="dots" onclick="toggleMenu(<?= $r['id'] ?>)">⋮</span>
         <div class="menu" id="menu<?= $r['id'] ?>">
             <a href="edit.php?id=<?= $r['id'] ?>">Edit</a>
-            <a href="hapus.php?id=<?= $r['id'] ?>" onclick="return confirm('Hapus tugas ini?')">Hapus</a>
+            <a href="hapus.php?id=<?= $r['id'] ?>" class="deleteBtn">Hapus</a>
         </div>
     </td>
 </tr>
@@ -72,6 +99,25 @@ function toggleMenu(id){
     const menu = document.getElementById("menu"+id);
     menu.style.display = (menu.style.display=="block") ? "none" : "block";
 }
+
+document.getElementById("searchInput").addEventListener("keyup", function(){
+    let filter = this.value.toLowerCase();
+    let rows = document.querySelectorAll("#taskTable tr");
+
+    rows.forEach((row, index)=>{
+        if(index===0) return;
+        let text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+    });
+});
+
+document.querySelectorAll(".deleteBtn").forEach(btn=>{
+    btn.addEventListener("click",function(e){
+        if(!confirm("Yakin hapus data ini?")){
+            e.preventDefault();
+        }
+    });
+});
 </script>
 
 </body>

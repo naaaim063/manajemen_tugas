@@ -8,45 +8,36 @@ body{
     background:#000;
 }
 
-/* ============================= */
-/* ===== BACKGROUND HALAMAN ===== */
-/* ============================= */
-
-/* INDEX.PHP */
 body.home .bg-dashboard{
-    background-image:url("images/dashboard.png"); /* Ganti gambar untuk index.php */
+    background-image:url("dashboard.png");
     background-size:cover;
     background-position:center;
     min-height:100vh;
 }
 
-/* TUGAS.PHP */
 body.tugas .bg-dashboard{
-    background-image:url("images/daftar_tugas.png"); /* Ganti gambar untuk tugas.php */
+    background-image:url("daftar_tugas.png");
     background-size:cover;
     background-position:center;
     min-height:100vh;
 }
 
-/* PROFIL.PHP */
 body.profil .bg-dashboard{
-    background-image:url("images/profil01.png"); /* Ganti gambar untuk profil.php */
+    background-image:url("profil01.png");
     background-size:cover;
     background-position:center;
     min-height:100vh;
 }
 
-/* TAMBAH.PHP */
 body.tambah .bg-dashboard{
-    background-image:url("images/daftar_tugas.png"); /* Ganti gambar untuk index.php */
+    background-image:url("daftar_tugas.png");
     background-size:cover;
     background-position:center;
     min-height:100vh;
 }
 
-/* EDIT.PHP */
 body.edit .bg-dashboard{
-    background-image:url("images/daftar_tugas.png"); /* Ganti gambar untuk index.php */
+    background-image:url("daftar_tugas.png");
     background-size:cover;
     background-position:center;
     min-height:100vh;
@@ -57,12 +48,10 @@ body.edit .bg-dashboard{
     min-height:100vh;
 }
 
-/* Layout */
 .app{
     display:flex;
 }
 
-/* Sidebar */
 .sidebar{
     width:230px;
     background:#1e2a48;
@@ -90,14 +79,12 @@ body.edit .bg-dashboard{
     background:#4f74d9;
 }
 
-/* Main */
 .main{
     flex:1;
     padding:30px;
     color:white;
 }
 
-/* Kalender */
 .calendar-big{
     background:rgba(255,255,255,0.15);
     backdrop-filter:blur(8px);
@@ -143,7 +130,6 @@ body.edit .bg-dashboard{
     color:#eee;
 }
 
-/* Cards */
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -156,17 +142,31 @@ body.edit .bg-dashboard{
     padding:20px;
     border-radius:12px;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.card span{
+    display:block;
+    margin-bottom:10px;
 }
 
 .card b{
     font-size:36px;
+    margin-top:8px;
+    background:none;
+    width:auto;
+    height:auto;
+    border-radius:0;
+    color:inherit;
 }
 
 .blue{border-left:5px solid #4f74d9;}
 .green{border-left:5px solid #2ecc71;}
 .red{border-left:5px solid #e74c3c;}
 
-/* Button */
 .btn{
     background:#4f74d9;
     color:white;
@@ -177,7 +177,6 @@ body.edit .bg-dashboard{
     margin-bottom:10px;
 }
 
-/* Tabel Data Tugas */
 .table-box{
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(8px);
@@ -193,7 +192,8 @@ body.edit .bg-dashboard{
     color:black;
 }
 
-.table th, .table td{
+.table th,
+.table td{
     padding:12px;
     border:1px solid #ddd;
 }
@@ -211,7 +211,6 @@ body.edit .bg-dashboard{
     background:#eef2ff;
 }
 
-/* Menu titik tiga */
 .dots{
     cursor:pointer;
     font-size:20px;
@@ -240,7 +239,6 @@ body.edit .bg-dashboard{
     color:white;
 }
 
-/* Form elegan */
 .form-box{
     background:rgba(255,255,255,0.15);
     backdrop-filter:blur(10px);
@@ -299,16 +297,11 @@ body.edit .bg-dashboard{
     background:#3b5fc4;
 }
 
-/* ============================= */
-/* ===== PROFIL PAGE ONLY ===== */
-/* ============================= */
-
 .profile-wrapper{
     display:flex;
     gap:25px;
 }
 
-/* Menu kiri profil */
 .profile-sidebar{
     width:240px;
     background:rgba(255,255,255,0.15);
@@ -357,7 +350,6 @@ body.edit .bg-dashboard{
     background:#e74c3c;
 }
 
-/* Konten kanan */
 .profile-content-box{
     flex:1;
     background:rgba(255,255,255,0.15);
@@ -366,7 +358,6 @@ body.edit .bg-dashboard{
     padding:25px;
 }
 
-/* Bagian atas */
 .profile-top-box{
     display:flex;
     gap:20px;
@@ -389,7 +380,6 @@ body.edit .bg-dashboard{
     color:#ddd;
 }
 
-/* Grid info */
 .profile-info-grid{
     display:grid;
     grid-template-columns:1fr 1fr 1fr;

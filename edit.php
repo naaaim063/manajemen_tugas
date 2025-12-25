@@ -19,7 +19,7 @@ if(isset($_POST['update'])){
 <html>
 <head>
 <title>Edit Tugas</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 

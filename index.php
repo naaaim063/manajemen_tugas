@@ -8,7 +8,7 @@ $todo  = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM tugas WHERE status='P
 <html>
 <head>
 <title>Homepage</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
